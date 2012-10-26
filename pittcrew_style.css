@@ -1,0 +1,59 @@
+@charset "iso-8859-1";
+body {
+	font-family: Verdana, Arial, Helvetica, Geneva, sans-serif;
+}
+
+h1,h2 {
+	font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+	font-size: small; font-family: Verdana, Arial, Helvetica, sans-serif;
+	background: #FF6; border-style: none none solid none; border-width: thin; padding: 2px;
+}
+
+.titlebar h1 {
+	color: Navy;
+	border-top : solid;
+	border-bottom : solid;
+	text-align : center;
+}
+
+#homeContent {
+	width: 60%;
+	margin-top: 0;
+}
+
+#homeSidebar {
+	width: 35%;
+	float: right;
+	background: #E0E0E0;
+	border : 1px solid #666;
+	padding : 0.5em;
+	font-size : smaller;
+}
+#homeSidebar ul {
+	margin-left: 0;
+	list-style : square inside;
+}
+#homeSidebar a {
+	font-weight : bold;
+}
+
+#footer {
+	font-size : small;
+	text-align : center;
+	margin-top : 1em;
+}
+hr.footerDivider {
+	color : Black;
+	height : 1px;
+	margin-bottom : 0;
+}
+
+.newsItem h2 {
+	color : Teal;
+	border-top : thin solid;
+	font-size : 110%;
+	margin-bottom : 0;
+}
