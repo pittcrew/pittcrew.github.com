@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head profile="http://gmpg.org/xfn/11">
+  <title>PittGeek   &raquo; Applications</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="generator" content="WordPress 3.4.2" /> <!-- leave this for stats -->
+
+  <link rel="alternate" type="text/xml" title="RSS .92" href="http://pittcrew.net/geekblog/feed/rss/" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://pittcrew.net/geekblog/feed/" />
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://pittcrew.net/geekblog/feed/atom/" />
+  <link rel="pingback" href="http://pittcrew.net/geekblog/xmlrpc.php" />
+
+  	<link rel='archives' title='July 2011' href='http://pittcrew.net/geekblog/2011/07/' />
+	<link rel='archives' title='September 2009' href='http://pittcrew.net/geekblog/2009/09/' />
+	<link rel='archives' title='January 2009' href='http://pittcrew.net/geekblog/2009/01/' />
+	<link rel='archives' title='October 2008' href='http://pittcrew.net/geekblog/2008/10/' />
+	<link rel='archives' title='June 2008' href='http://pittcrew.net/geekblog/2008/06/' />
+	<link rel='archives' title='May 2008' href='http://pittcrew.net/geekblog/2008/05/' />
+	<link rel='archives' title='October 2007' href='http://pittcrew.net/geekblog/2007/10/' />
+	<link rel='archives' title='September 2007' href='http://pittcrew.net/geekblog/2007/09/' />
+	<link rel='archives' title='November 2006' href='http://pittcrew.net/geekblog/2006/11/' />
+	<link rel='archives' title='October 2006' href='http://pittcrew.net/geekblog/2006/10/' />
+	<link rel='archives' title='August 2006' href='http://pittcrew.net/geekblog/2006/08/' />
+	<link rel='archives' title='July 2006' href='http://pittcrew.net/geekblog/2006/07/' />
+	<link rel='archives' title='June 2006' href='http://pittcrew.net/geekblog/2006/06/' />
+	<link rel='archives' title='April 2006' href='http://pittcrew.net/geekblog/2006/04/' />
+	<link rel='archives' title='January 2006' href='http://pittcrew.net/geekblog/2006/01/' />
+	<link rel='archives' title='December 2005' href='http://pittcrew.net/geekblog/2005/12/' />
+	<link rel='archives' title='September 2005' href='http://pittcrew.net/geekblog/2005/09/' />
+
+  <link rel="alternate" type="application/rss+xml" title="PittGeek &raquo; Applications Category Feed" href="http://pittcrew.net/geekblog/category/applications/feed/" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://pittcrew.net/geekblog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://pittcrew.net/geekblog/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.4.2" />
+  <link rel="stylesheet" href="http://pittcrew.net/geekblog/wp-content/themes/scribbishwp/style.css" type="text/css" media="all" />
+</head>
+
+<body>
+<div id="container">
+  <div id="header">
+  	<h1><span><a href="http://pittcrew.net/geekblog">PittGeek</a></span></h1>
+  	<h2>A blog only a geek could love</h2>
+  </div>
+
+  <div id="page">
+
+	<div id="content">
+
+		
+				  <div class="hentry" id="article-22">
+				<h2 class="entry-title">
+          <a href="http://pittcrew.net/geekblog/2007/10/23/u3-version-of-password-safe/" rel="bookmark">U3 version of Password Safe</a>
+                  </h2>
+
+        <div class="posted">
+          <span class="vcard">
+            Posted by <span class="fn">Kenny</span>
+          </span>
+          <abbr class="published" title="2007-10-23T21:19:30Z"><span class="posted_date" title="Tue, 23 Oct 2007 17:19:30 EDT">on October 23, 2007</span></abbr>
+        </div>
+			  <br class="clear" />	
+				<div class="entry-content">
+					<p>I recently purchased a <a href="http://www.u3.com/">U3</a>-enabled flash drive. I&#8217;ve been using <a href="http://passwordsafe.sourceforge.net/">Password Safe</a> (originally from Bruce Schneier&#8217;s <a href="http://www.counterpane.com/">Counterpane Labs</a>, now a SourceForge project) for some time now to store my passwords, and it seemed like a perfect application to have on a flash drive. I was shocked when I discovered that they wanted $9.95 for the <a href="http://software.u3.com/Product_Details.aspx?productId=294&#038;Selection=7">U3 version</a> of a free utility!</p>
+<p>Well, the <a href="http://www.u3.com/developers/deploymentkit_sc.aspx">U3 Developer Kit</a> is available for a free registration and Password Safe is Open Source, so I decided to see if I could build my own U3 version. It turned out to be easier than I thought. The standard binary distribution of Password Safe already includes all of the necessary U3 support. I just followed the U3 packaging guidelines along with some pathnames gleaned from the Password Safe source to lay out the U3 package. I then used the U3 tools to generate the manifest file and configure the various actions. I even wrote a little device install utility as an <a href="http://nsis.sourceforge.net/">NSIS</a> script to make sure the default data directory gets created when installing to the flash drive.</p>
+<p>I&#8217;m hereby making available the final result under the same <a href="http://www.opensource.org/licenses/artistic-license.php">Artistic License</a> terms as Password Safe itself. This is based on the 3.10 version of Password Safe, but I will attempt to provide updates whenever I happen to notice a new release of the original binaries. Feel free to <a href="mailto:kenny.pitt@gmail.com">email me</a> if you have any feedback. I simply ask that you remember I had nothing to do with the original Password Safe program, only the packaging.</p>
+<ul>
+<li><a href="/projects/U3/pwsafe/pwsafe-u3-3.10-installer.exe">U3 Installer</a></li>
+<li><a href="/projects/U3/pwsafe/pwsafe-u3-3.10-src.zip">Source</a><br />
+        The source ZIP contains just the source files for the U3 packaging. You&#8217;ll need to obtain the program binaries from Password Safe and the <code>U3Action.exe</code> from the U3 Developer Tools, then place the files according to the directory listing in <code>package_dir.txt</code>. You can also get the U3P2EXE tool from the U3 site to build the executable installer package.
+    </li>
+</ul>
+				</div>
+				<ul class="meta">
+          <li class="categories">Posted in <a href="http://pittcrew.net/geekblog/category/applications/" title="View all posts in Applications" rel="category tag">Applications</a></li>
+          <li>Meta
+            <span>Comments Off</span>,
+            <a href="http://pittcrew.net/geekblog/2007/10/23/u3-version-of-password-safe/" rel="bookmark">permalink</a>,
+            <a href='http://pittcrew.net/geekblog/2007/10/23/u3-version-of-password-safe/feed/'>rss</a>          </li>
+        </ul>
+			</div>
+	
+				  <div class="hentry" id="article-12">
+				<h2 class="entry-title">
+          <a href="http://pittcrew.net/geekblog/2006/04/16/google-releases-calendar/" rel="bookmark">Google releases Calendar</a>
+                  </h2>
+
+        <div class="posted">
+          <span class="vcard">
+            Posted by <span class="fn">Kenny</span>
+          </span>
+          <abbr class="published" title="2006-04-17T02:55:46Z"><span class="posted_date" title="Sun, 16 Apr 2006 22:55:46 EDT">on April 16, 2006</span></abbr>
+        </div>
+			  <br class="clear" />	
+				<div class="entry-content">
+					<p>This past week, Google <a href="http://googleblog.blogspot.com/2006/04/its-about-time.html">released</a> the new <a href="http://calendar.google.com/">Google Calendar</a> service.  I&#8217;ve really become a big fan of <a href="http://mail.google.com/">Gmail</a>, and it looks like this may be another service that I&#8217;ll be getting a bit of use out of.</p>
+<p>My wife has been trying to get me to keep better track of our various family events and appointments, but I find the process a bit cumbersome.   She puts together a calendar on paper, which I then have to take to work and transcribe into my Outlook calendar.  Once the data is in Outlook, things work pretty well as long as I&#8217;m at work.  But if I&#8217;m at home, I either have to connect to the VPN and Remote Desktop into my computer at work so I can bring up Outlook, or just ask my wife like I always did before.</p>
+<p>With Google Calendar, we can each have a personal calendar that we share with each other so we can keep track of each other&#8217;s appointments.  We also set up a shared family calendar that we can both add appointments to.  And since it&#8217;s Web-based, I can access it anywhere, anytime.  It&#8217;s also integrated with Gmail so I can receive email reminders of upcoming events, use Calendar to send out event invitations, and easily add appointments for invitations that I receive.</p>
+<p>This is definitely still a Beta service and it has some quirks and limitations.  It doesn&#8217;t yet support Safari on the Mac, and my wife <i>hates</i> the mini monthly calendar that doesn&#8217;t differentiate between the days of the selected month and the extra week or so that it shows from the previous and next months.  I&#8217;m sure Google will be making lots of improvements and bug fixes in the coming months, and probably adding some new features as well, but it certainly shows a lot of promise as another one of those services that just becomes a part of your daily routine.</p>
+				</div>
+				<ul class="meta">
+          <li class="categories">Posted in <a href="http://pittcrew.net/geekblog/category/applications/" title="View all posts in Applications" rel="category tag">Applications</a>, <a href="http://pittcrew.net/geekblog/category/internet/" title="View all posts in Internet" rel="category tag">Internet</a></li>
+          <li>Meta
+            <span>Comments Off</span>,
+            <a href="http://pittcrew.net/geekblog/2006/04/16/google-releases-calendar/" rel="bookmark">permalink</a>,
+            <a href='http://pittcrew.net/geekblog/2006/04/16/google-releases-calendar/feed/'>rss</a>          </li>
+        </ul>
+			</div>
+	
+				  <div class="hentry" id="article-10">
+				<h2 class="entry-title">
+          <a href="http://pittcrew.net/geekblog/2006/01/25/opera-browser-is-now-free/" rel="bookmark">Opera browser is now free</a>
+                  </h2>
+
+        <div class="posted">
+          <span class="vcard">
+            Posted by <span class="fn">Kenny</span>
+          </span>
+          <abbr class="published" title="2006-01-25T16:41:02Z"><span class="posted_date" title="Wed, 25 Jan 2006 12:41:02 EDT">on January 25, 2006</span></abbr>
+        </div>
+			  <br class="clear" />	
+				<div class="entry-content">
+					<p>The Opera browser is <a href="http://my.opera.com/community/blog/show.dml/22627">now totally free</a>.  Opera started out as one of the few commercial competitors to Microsoft and Netscape&#8217;s free browsers. They later came out with an ad-supported version that you could use for free if you didn&#8217;t want to pay extra to get rid of the ads, and now they have finally eliminated the ads and made it entirely free.</p>
+<p>This has apparently been out there for a while, but it doesn&#8217;t seem to have gotten much hype. Opera has long been considered one of the fastest and most standards compliant browsers available, but it&#8217;s commercial beginnings may have hurt its acceptance. It has its quirks, but it&#8217;s a pretty good browser that also includes a decent mail client and RSS reader, and all within an installed size that&#8217;s barely a third the size of Firefox.</p>
+				</div>
+				<ul class="meta">
+          <li class="categories">Posted in <a href="http://pittcrew.net/geekblog/category/applications/" title="View all posts in Applications" rel="category tag">Applications</a>, <a href="http://pittcrew.net/geekblog/category/internet/" title="View all posts in Internet" rel="category tag">Internet</a></li>
+          <li>Meta
+            <span>Comments Off</span>,
+            <a href="http://pittcrew.net/geekblog/2006/01/25/opera-browser-is-now-free/" rel="bookmark">permalink</a>,
+            <a href='http://pittcrew.net/geekblog/2006/01/25/opera-browser-is-now-free/feed/'>rss</a>          </li>
+        </ul>
+			</div>
+	
+				  <div class="hentry" id="article-8">
+				<h2 class="entry-title">
+          <a href="http://pittcrew.net/geekblog/2005/12/05/internet-explorer-inside-a-firefox-tab/" rel="bookmark">Internet Explorer inside a Firefox tab</a>
+                  </h2>
+
+        <div class="posted">
+          <span class="vcard">
+            Posted by <span class="fn">Kenny</span>
+          </span>
+          <abbr class="published" title="2005-12-05T17:44:12Z"><span class="posted_date" title="Mon, 05 Dec 2005 13:44:12 EDT">on December 05, 2005</span></abbr>
+        </div>
+			  <br class="clear" />	
+				<div class="entry-content">
+					<p>Via <a href="http://www.hanselman.com/blog/PermaLink.aspx?guid=4d139743-1b0f-422c-943f-7d13db1472bb">Scott Hanselman</a>, you can now display a web page with Internet Explorer directly inside a Firefox tab. The extension is called <a href="http://ietab.mozdev.org/">IE Tab</a>, and it provides similar functionality to the older <a href="http://ieview.mozdev.org/">IE View</a> except that it embeds Internet Explorer inside Firefox instead of opening a separate IE window. Once installed, you can right-click a page in Firefox and switch to IE mode without switching tabs. You can also right-click a link and open the link in a new IE tab. You can even configure a list of sites that will always display in an IE tab!</p>
+<p>It&#8217;s not perfect yet, but 99% of the time it does a fantastic job. <a href="http://browser.netscape.com/ns8/">Netscape 8.0</a> has a similar feature, but I find it a bit cumbersome and I really like being able to do it directly in Firefox.</p>
+				</div>
+				<ul class="meta">
+          <li class="categories">Posted in <a href="http://pittcrew.net/geekblog/category/applications/" title="View all posts in Applications" rel="category tag">Applications</a>, <a href="http://pittcrew.net/geekblog/category/internet/" title="View all posts in Internet" rel="category tag">Internet</a></li>
+          <li>Meta
+            <span>Comments Off</span>,
+            <a href="http://pittcrew.net/geekblog/2005/12/05/internet-explorer-inside-a-firefox-tab/" rel="bookmark">permalink</a>,
+            <a href='http://pittcrew.net/geekblog/2005/12/05/internet-explorer-inside-a-firefox-tab/feed/'>rss</a>          </li>
+        </ul>
+			</div>
+	
+				  <div class="hentry" id="article-4">
+				<h2 class="entry-title">
+          <a href="http://pittcrew.net/geekblog/2005/09/01/google-talk-tips/" rel="bookmark">Google Talk tips</a>
+                  </h2>
+
+        <div class="posted">
+          <span class="vcard">
+            Posted by <span class="fn">Kenny</span>
+          </span>
+          <abbr class="published" title="2005-09-02T02:35:35Z"><span class="posted_date" title="Thu, 01 Sep 2005 22:35:35 EDT">on September 01, 2005</span></abbr>
+        </div>
+			  <br class="clear" />	
+				<div class="entry-content">
+					<p>Philipp Lenssen posted some <a href="http://blog.outer-court.com/archive/2005-08-25-n18.html">tips for Google Talk</a>. Be sure to read the comments, too, for additional tips discovered by readers.</p>
+<p>My favorite tip is adding emphasis in messages using the <strong>*bold*</strong> and <em>_italic_</em> convention that has been commonly used in plain-text e-mail and Usenet posts for years. I&#8217;ve never been one to use a lot of formatting in IM&#8217;s, so this is perfect for me. Simple, clean, gets the job done.</p>
+				</div>
+				<ul class="meta">
+          <li class="categories">Posted in <a href="http://pittcrew.net/geekblog/category/applications/" title="View all posts in Applications" rel="category tag">Applications</a></li>
+          <li>Meta
+            <span>Comments Off</span>,
+            <a href="http://pittcrew.net/geekblog/2005/09/01/google-talk-tips/" rel="bookmark">permalink</a>,
+            <a href='http://pittcrew.net/geekblog/2005/09/01/google-talk-tips/feed/'>rss</a>          </li>
+        </ul>
+			</div>
+	
+				  <div class="hentry" id="article-3">
+				<h2 class="entry-title">
+          <a href="http://pittcrew.net/geekblog/2005/09/01/google-talk-is-here/" rel="bookmark">Google Talk is here</a>
+                  </h2>
+
+        <div class="posted">
+          <span class="vcard">
+            Posted by <span class="fn">Kenny</span>
+          </span>
+          <abbr class="published" title="2005-09-01T21:37:31Z"><span class="posted_date" title="Thu, 01 Sep 2005 17:37:31 EDT">on September 01, 2005</span></abbr>
+        </div>
+			  <br class="clear" />	
+				<div class="entry-content">
+					<p>I&#8217;m a little behind the times in blogging about this, but I needed to actually have a blog first. Rumors have been flying for a while that Google was planning to release its own IM service, and now <a href="http://talk.google.com/">Google Talk</a> is here. It is based on the <a href="http://www.jabber.org/">Jabber</a> <a href="http://www.xmpp.org/">XMPP</a> protocol, but it isn&#8217;t yet linked into the Jabber server network.</p>
+<p>You won&#8217;t find any fancy features in the minimalist client program, but that can sometimes be a good thing as it seems to use far fewer system resources than most other clients. If you want a more feature-rich client, you should be able to connect with any client that supports Jabber. You&#8217;ll also need to use a different client if you are not running on Windows, because the Google Talk client is currently a Windows-only application.</p>
+<p>Currently, you can only chat with other Google Talk users, although Google <a href="http://www.google.com/talk/about.html#open">promises that they are committed to interoperability</a>. Unfortunately, I don&#8217;t know of any friends that are on Google Talk yet, so I can&#8217;t give it a thorough test in daily use.</p>
+				</div>
+				<ul class="meta">
+          <li class="categories">Posted in <a href="http://pittcrew.net/geekblog/category/applications/" title="View all posts in Applications" rel="category tag">Applications</a></li>
+          <li>Meta
+            <span>Comments Off</span>,
+            <a href="http://pittcrew.net/geekblog/2005/09/01/google-talk-is-here/" rel="bookmark">permalink</a>,
+            <a href='http://pittcrew.net/geekblog/2005/09/01/google-talk-is-here/feed/'>rss</a>          </li>
+        </ul>
+			</div>
+	
+		
+		<div class="navigation">
+			<div class="alignleft"></div>
+			<div class="alignright"></div>
+		</div>
+	
+			
+	</div>
+
+	<div id="sidebar">
+    <ul>
+
+<li id="search-2" class="widget widget_search"><form method="get" id="searchform" action="/geekblog/index.php">
+<div><input type="text" value="" name="s" id="s" />
+<input type="submit" id="searchsubmit" value="Search" />
+</div>
+</form></li>
+<li id="pages-2" class="widget widget_pages"><h2 class="widgettitle">Pages</h2>
+		<ul>
+			<li class="page_item page-item-14"><a href="http://pittcrew.net/geekblog/scribbishwp/">ScribbishWP Theme</a></li>
+		</ul>
+		</li>
+<li id="categories-1" class="widget widget_categories"><h2 class="widgettitle">Categories</h2>
+		<ul>
+	<li class="cat-item cat-item-8"><a href="http://pittcrew.net/geekblog/category/net/" title="View all posts filed under .NET">.NET</a>
+</li>
+	<li class="cat-item cat-item-3 current-cat"><a href="http://pittcrew.net/geekblog/category/applications/" title="View all posts filed under Applications">Applications</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://pittcrew.net/geekblog/category/blog/" title="View all posts filed under Blog">Blog</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://pittcrew.net/geekblog/category/general/" title="View all posts filed under General">General</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://pittcrew.net/geekblog/category/internet/" title="View all posts filed under Internet">Internet</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://pittcrew.net/geekblog/category/mac/" title="View all posts filed under Mac">Mac</a>
+</li>
+	<li class="cat-item cat-item-2"><a href="http://pittcrew.net/geekblog/category/programming/" title="View all posts filed under Programming">Programming</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://pittcrew.net/geekblog/category/visual-studio/" title="View all posts filed under Visual Studio">Visual Studio</a>
+</li>
+		</ul>
+</li>
+  <li id="syndicate"><h2 class="sidebar-title">Syndicate</h2>
+    <ul>
+      <li><a href="feed:http://pittcrew.net/geekblog/feed/" title="RSS 2.0 feed">Articles</a></li>
+      <li><a href="feed:http://pittcrew.net/geekblog/comments/feed/" title="Comments RSS 2.0 feed">Comments</a></li>
+    </ul>
+  </li>
+<li id="archives-2" class="widget widget_archive"><h2 class="widgettitle">Archives</h2>
+		<ul>
+			<li><a href='http://pittcrew.net/geekblog/2011/07/' title='July 2011'>July 2011</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2009/09/' title='September 2009'>September 2009</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2009/01/' title='January 2009'>January 2009</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2008/10/' title='October 2008'>October 2008</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2008/06/' title='June 2008'>June 2008</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2008/05/' title='May 2008'>May 2008</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2007/10/' title='October 2007'>October 2007</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2007/09/' title='September 2007'>September 2007</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2006/11/' title='November 2006'>November 2006</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2006/10/' title='October 2006'>October 2006</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2006/08/' title='August 2006'>August 2006</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2006/07/' title='July 2006'>July 2006</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2006/06/' title='June 2006'>June 2006</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2006/04/' title='April 2006'>April 2006</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2006/01/' title='January 2006'>January 2006</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2005/12/' title='December 2005'>December 2005</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2005/09/' title='September 2005'>September 2005</a></li>
+		</ul>
+</li>
+<li id="linkcat-7" class="widget widget_links"><h2 class="widgettitle">Blogroll</h2>
+
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.codinghorror.com/blog/">Coding Horror</a></li>
+<li><a href="http://martinfowler.com/bliki/">Martin Fowler</a></li>
+<li><a href="http://quotedprintable.com/">Quoted-Printable</a></li>
+<li><a href="http://weblogs.asp.net/scottgu/">Scott Guthrie</a></li>
+<li><a href="http://www.hanselman.com/blog/">Scott Hanselman</a></li>
+
+	</ul>
+</li>
+
+  <li id="meta"><h2 class="sidebar-title">Meta</h2>
+    <ul>
+            <li><a href="http://pittcrew.net/geekblog/wp-login.php">Log in</a></li>
+                </ul>
+  </li>
+
+    </ul>
+	</div>
+
+
+    <br style="clear:both;" />
+  </div>
+
+  <div id="footer">
+    <hr />
+	  <p><a href="http://pittcrew.net/geekblog">PittGeek</a></p>
+    <ul>
+      <li>powered by <a href="http://wordpress.org">WordPress</a> /
+          styled with <a href="http://pittcrew.net/geekblog/scribbishwp">ScribbishWP</a></li>
+    </ul>
+  	<!-- php echo $wpdb->num_queries; ?> queries. 3.917 seconds. -->
+  </div>
+</div>
+
+<!-- Original theme design by Packagethief - http://quotedprintable.com/pages/scribbish -->
+<!-- WordPress theme port by Kenny Pitt - http://pittcrew.net/geekblog/scribbishwp -->
+
+		
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head profile="http://gmpg.org/xfn/11">
+  <title>PittGeek   &raquo; 2006 &raquo; July</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="generator" content="WordPress 3.4.2" /> <!-- leave this for stats -->
+
+  <link rel="alternate" type="text/xml" title="RSS .92" href="http://pittcrew.net/geekblog/feed/rss/" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://pittcrew.net/geekblog/feed/" />
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://pittcrew.net/geekblog/feed/atom/" />
+  <link rel="pingback" href="http://pittcrew.net/geekblog/xmlrpc.php" />
+
+  	<link rel='archives' title='July 2011' href='http://pittcrew.net/geekblog/2011/07/' />
+	<link rel='archives' title='September 2009' href='http://pittcrew.net/geekblog/2009/09/' />
+	<link rel='archives' title='January 2009' href='http://pittcrew.net/geekblog/2009/01/' />
+	<link rel='archives' title='October 2008' href='http://pittcrew.net/geekblog/2008/10/' />
+	<link rel='archives' title='June 2008' href='http://pittcrew.net/geekblog/2008/06/' />
+	<link rel='archives' title='May 2008' href='http://pittcrew.net/geekblog/2008/05/' />
+	<link rel='archives' title='October 2007' href='http://pittcrew.net/geekblog/2007/10/' />
+	<link rel='archives' title='September 2007' href='http://pittcrew.net/geekblog/2007/09/' />
+	<link rel='archives' title='November 2006' href='http://pittcrew.net/geekblog/2006/11/' />
+	<link rel='archives' title='October 2006' href='http://pittcrew.net/geekblog/2006/10/' />
+	<link rel='archives' title='August 2006' href='http://pittcrew.net/geekblog/2006/08/' />
+	<link rel='archives' title='July 2006' href='http://pittcrew.net/geekblog/2006/07/' />
+	<link rel='archives' title='June 2006' href='http://pittcrew.net/geekblog/2006/06/' />
+	<link rel='archives' title='April 2006' href='http://pittcrew.net/geekblog/2006/04/' />
+	<link rel='archives' title='January 2006' href='http://pittcrew.net/geekblog/2006/01/' />
+	<link rel='archives' title='December 2005' href='http://pittcrew.net/geekblog/2005/12/' />
+	<link rel='archives' title='September 2005' href='http://pittcrew.net/geekblog/2005/09/' />
+
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://pittcrew.net/geekblog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://pittcrew.net/geekblog/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.4.2" />
+  <link rel="stylesheet" href="http://pittcrew.net/geekblog/wp-content/themes/scribbishwp/style.css" type="text/css" media="all" />
+</head>
+
+<body>
+<div id="container">
+  <div id="header">
+  	<h1><span><a href="http://pittcrew.net/geekblog">PittGeek</a></span></h1>
+  	<h2>A blog only a geek could love</h2>
+  </div>
+
+  <div id="page">
+
+	<div id="content">
+
+		
+				  <div class="hentry" id="article-15">
+				<h2 class="entry-title">
+          <a href="http://pittcrew.net/geekblog/2006/07/18/scribbishwp-sidebar-bug-in-ie/" rel="bookmark">ScribbishWP sidebar bug in IE</a>
+          <span class="comment_count">1</span>        </h2>
+
+        <div class="posted">
+          <span class="vcard">
+            Posted by <span class="fn">Kenny</span>
+          </span>
+          <abbr class="published" title="2006-07-18T21:03:43Z"><span class="posted_date" title="Tue, 18 Jul 2006 17:03:43 EDT">on July 18, 2006</span></abbr>
+        </div>
+			  <br class="clear" />	
+				<div class="entry-content">
+					<p>Some ScribbishWP users have reported problems with the sidebar in Internet Explorer. When the site is viewed in other browsers such as Firefox or Safari everything looks fine, but in IE the sidebar disappears to the bottom of the page below the content. The problem doesn&#8217;t occur on all ScribbishWP sites, so what causes the problem and what can you do about it?</p>
+<h3>The Problem</h3>
+<p>Surprise, surprise! The problem is actually a bug in the way Internet Explorer implements CSS. It is sometimes referred to as the &#8220;Expanding Box&#8221; problem, and it is triggered when one of the elements in the content area or the sidebar exceeds the column width defined in the stylesheet, You can get all the gory details of the bug at <a href="http://www.positioniseverything.net/explorer/expandingboxbug.html"><strong>Position is Everything</strong></a>. Internet Explorer 6.0 made a number of improvements in the handling of the CSS box model, but this particular bug still persists.</p>
+<p>In ScribbishWP, the content area and sidebar are assigned fixed widths in the stylesheet. This is partly for stylistic reasons and partly due to technical constraints of the current CSS standards. The positioning of the content area and sidebar into side-by-side columns depends on these fixed widths.</p>
+<p>When Internet Explorer expands the width of one of these columns, the columns will no longer fit side-by-side so the sidebar gets pushed down below the content area. This happens most often with images and <code>&lt;pre&gt;</code> blocks, but it&#8217;s possible in other cases also. Firefox and Safari, on the other hand, will limit the displayed width of the contained elements, and add a horizontal scrollbar below the element if necessary to allow the remainder of the element to be viewed.</p>
+<h3>The Workarounds</h3>
+<p>Yes, I said <em>workarounds</em> and not <em>solutions</em>. There are a variety of CSS hiding techniques and other browser-compatibility tricks, and some may wonder why I don&#8217;t use those to &#8220;fix&#8221; the problem in ScribbishWP. There are several modifications that can be made to the CSS styling to prevent the sidebar from shifting to the bottom, but they all involve tradeoffs, so I&#8217;m leaving it up to individual authors to decide what is best for their site.</p>
+<p>Here are several options that you might try if you want to avoid the problem on your site.</p>
+<h4>Adjust Your Content</h4>
+<p>Adjusting your content to fit within the size limits of the theme is really the only way to ensure that all visitors to your site receive basically the same experience. ScribbishWP defines a content area width of 500px and a sidebar width of 200px. If you can keep your content within these limits then you won&#8217;t have a problem.</p>
+<p>You should always scale your images appropriately for the available space. <code>&lt;pre&gt;</code> blocks can be a little trickier because adjusting the formatting to make it narrower may affect the meaning. It is also impossible to control the exact size of the fonts on different systems, so leave a little breathing room if you can.</p>
+<h4>Adjust the Column Widths</h4>
+<p>If you can&#8217;t quite fit your content to the default column widths, you might want to adjust the widths. The column widths in ScribbishWP are controlled by three elements in the <code>style.css</code> file: <b>#content</b>, <b>#sidebar</b>, and <b>#container</b>. #content and #sidebar should be self-explanatory. The width of #container is the total width of #content and #sidebar, plus an extra 40px for the border between the two columns. For the default widths, this is 500px + 200px + 40px = 740px.</p>
+<p>Just be aware that the default widths in ScribbishWP are already hitting close to the limit of what can be viewed on an 800&#215;600 screen without horizontal scrolling. If you increase the widths by much then users may need higher resolution displays to view your site properly.</p>
+<h4>Set Fixed Element Widths</h4>
+<p>Internet Explorer won&#8217;t honor the fixed widths of the containing column elements, but it <em>will</em> honor a specific width assigned to the element itself. Assigning a specific width to an element will force IE to display scrollbars for the element if it exceeds the specified width.</p>
+<p>Unfortunately, IE doesn&#8217;t take quite the same approach as the other browsers when adding the scrollbars. Internet Explorer covers up part of the content by adding the scrollbars inside the current display area of the element instead of increasing the display height and adding the horizontal scrollbar below the element like Firefox and Safari. You may need to make extra room in the block by adding an empty line or two at the bottom, especially for single-line blocks, but that empty line will be seen as extra blank space in all other browsers.</p>
+<p>You&#8217;ll need to consider lots of variables when determining the correct width for a particular element. For example, the <code>&lt;pre&gt;</code> element in ScribbishWP uses 10px of padding, so the element width needs to be set to 490px instead of 500px. There is actually another 10px of padding on the right side, but it is not part of the visible portion of the element when the element is truncated so it isn&#8217;t included in the calculation. If an element is nested inside a list then you&#8217;ll need to reduce the width even further to account for the bullet margin.</p>
+<h4>Enable Line Breaking</h4>
+<p>You can force IE to add line breaks to normally &#8220;unbreakable&#8221; text by adding the following IE-specific CSS attribute:</p>
+<pre>  word-wrap: break-word;</pre>
+<p>This will, of course, mess up the careful formatting of your text without even giving you the control that you would have had by adjusting the content yourself. Non-IE browsers will ignore this non-standard attribute, though, so it should only affect the rendering on IE.</p>
+<h4>Hide the Overflow</h4>
+<p>You can ensure that your beautiful layout will never be compromised by telling IE to hide any content that overflows the boundaries of the content area. On the #content element in <code>style.css</code>, add the following CSS attribute:</p>
+<pre>  overflow: hidden;</pre>
+<p>This will cause IE to simply chop off any content that doesn&#8217;t fit within the column. The drawback is that IE won&#8217;t add any scrollbars or anything, The content is just gone, so the IE user will never see it.  Firefox and Safari still seem to display correctly because the element widths have already been adjusted before determining if there is any overflow.</p>
+				</div>
+				<ul class="meta">
+          <li class="categories">Posted in <a href="http://pittcrew.net/geekblog/category/blog/" title="View all posts in Blog" rel="category tag">Blog</a></li>
+          <li>Meta
+            <a href="http://pittcrew.net/geekblog/2006/07/18/scribbishwp-sidebar-bug-in-ie/#comments" title="Comment on ScribbishWP sidebar bug in IE">1 comment</a>,
+            <a href="http://pittcrew.net/geekblog/2006/07/18/scribbishwp-sidebar-bug-in-ie/" rel="bookmark">permalink</a>,
+            <a href='http://pittcrew.net/geekblog/2006/07/18/scribbishwp-sidebar-bug-in-ie/feed/'>rss</a>          </li>
+        </ul>
+			</div>
+	
+		
+		<div class="navigation">
+			<div class="alignleft"></div>
+			<div class="alignright"></div>
+		</div>
+	
+			
+	</div>
+
+	<div id="sidebar">
+    <ul>
+
+<li id="search-2" class="widget widget_search"><form method="get" id="searchform" action="/geekblog/index.php">
+<div><input type="text" value="" name="s" id="s" />
+<input type="submit" id="searchsubmit" value="Search" />
+</div>
+</form></li>
+<li id="pages-2" class="widget widget_pages"><h2 class="widgettitle">Pages</h2>
+		<ul>
+			<li class="page_item page-item-14"><a href="http://pittcrew.net/geekblog/scribbishwp/">ScribbishWP Theme</a></li>
+		</ul>
+		</li>
+<li id="categories-1" class="widget widget_categories"><h2 class="widgettitle">Categories</h2>
+		<ul>
+	<li class="cat-item cat-item-8"><a href="http://pittcrew.net/geekblog/category/net/" title="View all posts filed under .NET">.NET</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://pittcrew.net/geekblog/category/applications/" title="View all posts filed under Applications">Applications</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://pittcrew.net/geekblog/category/blog/" title="View all posts filed under Blog">Blog</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://pittcrew.net/geekblog/category/general/" title="View all posts filed under General">General</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://pittcrew.net/geekblog/category/internet/" title="View all posts filed under Internet">Internet</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://pittcrew.net/geekblog/category/mac/" title="View all posts filed under Mac">Mac</a>
+</li>
+	<li class="cat-item cat-item-2"><a href="http://pittcrew.net/geekblog/category/programming/" title="View all posts filed under Programming">Programming</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://pittcrew.net/geekblog/category/visual-studio/" title="View all posts filed under Visual Studio">Visual Studio</a>
+</li>
+		</ul>
+</li>
+  <li id="syndicate"><h2 class="sidebar-title">Syndicate</h2>
+    <ul>
+      <li><a href="feed:http://pittcrew.net/geekblog/feed/" title="RSS 2.0 feed">Articles</a></li>
+      <li><a href="feed:http://pittcrew.net/geekblog/comments/feed/" title="Comments RSS 2.0 feed">Comments</a></li>
+    </ul>
+  </li>
+<li id="archives-2" class="widget widget_archive"><h2 class="widgettitle">Archives</h2>
+		<ul>
+			<li><a href='http://pittcrew.net/geekblog/2011/07/' title='July 2011'>July 2011</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2009/09/' title='September 2009'>September 2009</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2009/01/' title='January 2009'>January 2009</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2008/10/' title='October 2008'>October 2008</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2008/06/' title='June 2008'>June 2008</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2008/05/' title='May 2008'>May 2008</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2007/10/' title='October 2007'>October 2007</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2007/09/' title='September 2007'>September 2007</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2006/11/' title='November 2006'>November 2006</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2006/10/' title='October 2006'>October 2006</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2006/08/' title='August 2006'>August 2006</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2006/07/' title='July 2006'>July 2006</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2006/06/' title='June 2006'>June 2006</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2006/04/' title='April 2006'>April 2006</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2006/01/' title='January 2006'>January 2006</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2005/12/' title='December 2005'>December 2005</a></li>
+	<li><a href='http://pittcrew.net/geekblog/2005/09/' title='September 2005'>September 2005</a></li>
+		</ul>
+</li>
+<li id="linkcat-7" class="widget widget_links"><h2 class="widgettitle">Blogroll</h2>
+
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.codinghorror.com/blog/">Coding Horror</a></li>
+<li><a href="http://martinfowler.com/bliki/">Martin Fowler</a></li>
+<li><a href="http://quotedprintable.com/">Quoted-Printable</a></li>
+<li><a href="http://weblogs.asp.net/scottgu/">Scott Guthrie</a></li>
+<li><a href="http://www.hanselman.com/blog/">Scott Hanselman</a></li>
+
+	</ul>
+</li>
+
+  <li id="meta"><h2 class="sidebar-title">Meta</h2>
+    <ul>
+            <li><a href="http://pittcrew.net/geekblog/wp-login.php">Log in</a></li>
+                </ul>
+  </li>
+
+    </ul>
+	</div>
+
+
+    <br style="clear:both;" />
+  </div>
+
+  <div id="footer">
+    <hr />
+	  <p><a href="http://pittcrew.net/geekblog">PittGeek</a></p>
+    <ul>
+      <li>powered by <a href="http://wordpress.org">WordPress</a> /
+          styled with <a href="http://pittcrew.net/geekblog/scribbishwp">ScribbishWP</a></li>
+    </ul>
+  	<!-- php echo $wpdb->num_queries; ?> queries. 0.511 seconds. -->
+  </div>
+</div>
+
+<!-- Original theme design by Packagethief - http://quotedprintable.com/pages/scribbish -->
+<!-- WordPress theme port by Kenny Pitt - http://pittcrew.net/geekblog/scribbishwp -->
+
+		
+</body>
+</html>
