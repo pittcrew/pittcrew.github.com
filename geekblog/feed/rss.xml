@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
-	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:atom="http://www.w3.org/2005/Atom"
 	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
@@ -10,7 +9,7 @@
 
 <channel>
 	<title>PittGeek</title>
-	<atom:link href="http://pittcrew.net/geekblog/feed/" rel="self" type="application/rss+xml" />
+	<atom:link href="http://pittcrew.net/geekblog/feed/rss.xml" rel="self" type="application/rss+xml" />
 	<link>http://pittcrew.net/geekblog</link>
 	<description>A blog only a geek could love</description>
 	<lastBuildDate>Mon, 11 Jul 2011 19:00:42 +0000</lastBuildDate>
@@ -30,7 +29,6 @@
 		<description><![CDATA[At first glance, Google+ seems promising. I like how the Circles feature gives you more control over who you share with. The desktop browser interface looks nice and works well, but the mobile experience on the iPhone leaves something to be desired. Several features are unavailable including photo uploading and profile editing, and viewing someone [...]]]></description>
 			<content:encoded><![CDATA[<p>At first glance, Google+ seems promising. I like how the Circles feature gives you more control over who you share with. The desktop browser interface looks nice and works well, but the mobile experience on the iPhone leaves something to be desired. Several features are unavailable including photo uploading and profile editing, and viewing someone else&#8217;s profile still redirects to Google Buzz. The iPad just displays a larger version of the iPhone interface that doesn&#8217;t take any advantage of the increased screen size. I hope Google will do a better job with iPad support than Facebook has. I&#8217;m looking forward to seeing what they&#8217;ve done with the iOS app, which is supposedly just waiting for approval from Apple.</p>
 ]]></content:encoded>
-			<wfw:commentRss>http://pittcrew.net/geekblog/2011/07/11/first-impressions-of-google/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
 		<item>
@@ -45,7 +43,6 @@
 		<description><![CDATA[Google recently increased the size of the search box on the home page and search results. Am I the only one that thinks it looks clunky and amateurish?]]></description>
 			<content:encoded><![CDATA[<p>Google recently <a href="http://googleblog.blogspot.com/2009/09/now-s-u-p-e-r-sized.html">increased the size of the search box</a> on the home page and search results. Am I the only one that thinks it looks clunky and amateurish?</p>
 ]]></content:encoded>
-			<wfw:commentRss>http://pittcrew.net/geekblog/2009/09/15/super-sized-google-search-box/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
 		<item>
@@ -63,7 +60,6 @@
 			<content:encoded><![CDATA[<p>I recently went through the unfortunate demise of the primary disk on my main development machine, so I had to rebuild my dev environment from scratch. I have a test server running SQL Server 2005, so I decided to install SQL Server 2008 on my dev machine for compatibility testing. Imagine my frustration when I tried to load up my database project in Visual Studio 2008 and was told that I needed a local instance of SQL Server 2005!</p>
 <p>Fortunately, Microsoft has a <a href="http://blogs.msdn.com/gertd/archive/2008/11/25/visual-studio-team-system-2008-database-edition-gdr-rtm.aspx">new GDR release of Database Edition</a> that adds support for SQL Server 2008. Unfortunately, this isn&#8217;t just a service pack, it&#8217;s more like a product upgrade. An upgrade of your database project is required, and the project will no longer be usable by other developers on the team if they haven&#8217;t upgraded to the GDR release also. Oh well, I guess you can&#8217;t have everything.</p>
 ]]></content:encoded>
-			<wfw:commentRss>http://pittcrew.net/geekblog/2009/01/23/visual-studio-2008-database-edition-and-sql-server-2008/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
 		<item>
@@ -81,7 +77,6 @@
 			<content:encoded><![CDATA[<p>When creating a new Windows Communication Foundation web service, the default extension is .svc. This can be a problem if you want to migrate an existing .NET web service where clients may have hard-coded the .asmx extension. The following article from MSDN Blogs shows how to configure a WCF web service that uses the .asmx extension:</p>
 <p><a href="http://blogs.msdn.com/wenlong/archive/2007/09/18/how-to-use-asmx-extension-to-handle-wcf-requests.aspx">Wenlong Dong&#8217;s Blog : How to use .asmx extension to handle WCF requests?</a></p>
 ]]></content:encoded>
-			<wfw:commentRss>http://pittcrew.net/geekblog/2008/10/16/wcf-services-with-the-asmx-extension/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
 		<item>
@@ -97,7 +92,6 @@
 		<description><![CDATA[Via Ajaxian: Google is now hosting a number of open-source AJAX libraries, so you can take advantage of the vast Google infrastructure to reduce the load on your server. Complete details on how to access the script files can be found in the AJAX Libraries API Developer&#8217;s Guide.]]></description>
 			<content:encoded><![CDATA[<p>Via <a href="http://ajaxian.com/archives/announcing-ajax-libraries-api-speed-up-your-ajax-apps-with-googles-infrastructure">Ajaxian</a>: Google is now hosting a number of open-source AJAX libraries, so you can take advantage of the vast Google infrastructure to reduce the load on your server. Complete details on how to access the script files can be found in the <a href="http://code.google.com/apis/ajaxlibs/documentation/">AJAX Libraries API Developer&#8217;s Guide</a>.</p>
 ]]></content:encoded>
-			<wfw:commentRss>http://pittcrew.net/geekblog/2008/10/15/open-source-ajax-libraries-hosted-by-google/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
 		<item>
@@ -112,7 +106,6 @@
 		<description><![CDATA[It looks like this blog was recently hacked with a rather nasty, malware-distributing trojan, and apparently this has been a rather wide-spread problem. Hopefully there weren&#8217;t too many visitors turned away by the &#8220;Warning &#8211; visiting this web site may harm your computer!&#8221; message from Google. Here is a blog article with more information about [...]]]></description>
 			<content:encoded><![CDATA[<p>It looks like this blog was recently hacked with a rather nasty, malware-distributing trojan, and apparently this has been a rather wide-spread problem. Hopefully there weren&#8217;t too many visitors turned away by the &#8220;Warning &#8211; visiting this web site may harm your computer!&#8221; message from Google. Here is a blog article with <a href="http://www.tipstrickstoolstechniques.com/?p=113">more information</a> about the problem. I deleted all of the WordPress files and upgraded to WordPress 2.5.1, then reloaded all of the ScribbishWP theme files from a backup. Finally, I had to hand-clean my WordPress config files and a few static HTML files. I asked for a Google review of the site after the cleanup and it looks like we&#8217;re in the clear for now, but please <a href="mailto:kenny.pitt@gmail.com">email me</a> if you notice anything like this happening again!</p>
 ]]></content:encoded>
-			<wfw:commentRss>http://pittcrew.net/geekblog/2008/06/13/we-were-hacked/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
 		<item>
@@ -128,7 +121,6 @@
 		<description><![CDATA[Some of the standard ASP.NET server controls allow the user to specify a template containing custom markup that will be used inside the server control. It is possible to create &#8220;.ascx&#8221; user controls that make use of this type of template. The MSDN documentation explains how.]]></description>
 			<content:encoded><![CDATA[<p>Some of the standard ASP.NET server controls allow the user to specify a template containing custom markup that will be used inside the server control. It is possible to create &#8220;.ascx&#8221; user controls that make use of this type of template. The <a href="http://msdn.microsoft.com/en-us/library/36574bf6.aspx">MSDN documentation explains how</a>.</p>
 ]]></content:encoded>
-			<wfw:commentRss>http://pittcrew.net/geekblog/2008/05/27/templates-in-aspnet-user-controls/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
 		<item>
@@ -152,7 +144,6 @@
     <strong>Update:</strong> It turns out that the compiler attaches an attribute to extension methods that is not defined in the .NET 2.0 library, so extension methods can only be used with .NET 3.5 after all.</li>
 </ul>
 ]]></content:encoded>
-			<wfw:commentRss>http://pittcrew.net/geekblog/2008/05/17/c-30-features-for-net-20/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
 		<item>
@@ -169,7 +160,6 @@
 			<content:encoded><![CDATA[<p>Clearly blog posts have been very sparse here, so I&#8217;m going to try something new. Whenever I find a good article or web site that helps me solve a particular problem I&#8217;m having, I&#8217;ll try to dash off a quick post referencing it. This&#8217;ll help me locate the information if I need it again later, and maybe it will help someone else find what they&#8217;re looking for too.</p>
 <p>Have you ever noticed those strange &#8220;WebResource.axd&#8221; URLs that ASP.NET likes to generate? I recently needed to return a JavaScript resource from a custom ASP.NET control and wondered if I could take advantage of &#8220;WebResource.axd&#8221; myself. Via ASP.NET blogger Jeff Putz, <a href="http://weblogs.asp.net/jeff/archive/2005/07/18/419842.aspx"><em>Using WebResource.axd for embedded resources</em></a> shows you how.</p>
 ]]></content:encoded>
-			<wfw:commentRss>http://pittcrew.net/geekblog/2008/05/07/webresourceaxd-mystery-solved/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
 		<item>
@@ -192,7 +182,6 @@
     </li>
 </ul>
 ]]></content:encoded>
-			<wfw:commentRss>http://pittcrew.net/geekblog/2007/10/23/u3-version-of-password-safe/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
 	</channel>
