@@ -183,8 +183,8 @@
 <p>Well, the <a href="http://www.u3.com/developers/deploymentkit_sc.aspx">U3 Developer Kit</a> is available for a free registration and Password Safe is Open Source, so I decided to see if I could build my own U3 version. It turned out to be easier than I thought. The standard binary distribution of Password Safe already includes all of the necessary U3 support. I just followed the U3 packaging guidelines along with some pathnames gleaned from the Password Safe source to lay out the U3 package. I then used the U3 tools to generate the manifest file and configure the various actions. I even wrote a little device install utility as an <a href="http://nsis.sourceforge.net/">NSIS</a> script to make sure the default data directory gets created when installing to the flash drive.</p>
 <p>I&#8217;m hereby making available the final result under the same <a href="http://www.opensource.org/licenses/artistic-license.php">Artistic License</a> terms as Password Safe itself. This is based on the 3.10 version of Password Safe, but I will attempt to provide updates whenever I happen to notice a new release of the original binaries. Feel free to <a href="mailto:kenny.pitt@gmail.com">email me</a> if you have any feedback. I simply ask that you remember I had nothing to do with the original Password Safe program, only the packaging.</p>
 <ul>
-<li><a href="/projects/U3/pwsafe/pwsafe-u3-3.10-installer.exe">U3 Installer</a></li>
-<li><a href="/projects/U3/pwsafe/pwsafe-u3-3.10-src.zip">Source</a><br />
+<li><a href="http://download.pittcrew.net/projects/U3/pwsafe/pwsafe-u3-3.10-installer.exe">U3 Installer</a></li>
+<li><a href="http://download.pittcrew.net/projects/U3/pwsafe/pwsafe-u3-3.10-src.zip">Source</a><br />
         The source ZIP contains just the source files for the U3 packaging. You&#8217;ll need to obtain the program binaries from Password Safe and the <code>U3Action.exe</code> from the U3 Developer Tools, then place the files according to the directory listing in <code>package_dir.txt</code>. You can also get the U3P2EXE tool from the U3 site to build the executable installer package.
     </li>
 </ul>
