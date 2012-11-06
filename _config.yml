@@ -1,1 +1,5 @@
 exclude: ["README.md", "Rakefile"]
+
+analytics:
+    tracking_id: UA-305046-1
+    base_domain: pittcrew.net

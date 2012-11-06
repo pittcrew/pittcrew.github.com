@@ -7,7 +7,7 @@ task :default => 'generate'
 desc "Generate jekyll site"
 task :generate do
   puts "## Generating site with Jekyll"
-  system "jekyll"
+  system "jekyll --safe"
 end
 
 desc "Launch preview environment"
