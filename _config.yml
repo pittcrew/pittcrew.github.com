@@ -1,4 +1,4 @@
-exclude: ["README.md", "Rakefile"]
+exclude: ["README.md", "Rakefile", "config.ru", "Gemfile", "Gemfile.lock", "Procfile"]
 
 analytics:
     tracking_id: UA-305046-1
