@@ -1,4 +1,9 @@
 require 'rack/contrib/try_static'
+require 'rack/rewrite'
+
+use Rack::Rewrite do
+  r301 %r{^/geekblog/scribbishwp/?$}, 'http://geek.pittcrew.net/scribbishwp/'
+end
 
 use Rack::TryStatic,
     :root => "_site",
