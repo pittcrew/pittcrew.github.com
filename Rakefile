@@ -7,12 +7,12 @@ task :default => 'generate'
 desc "Generate jekyll site"
 task :generate do
   puts "## Generating site with Jekyll"
-  system "jekyll --safe"
+  system "jekyll build --safe"
 end
 
 desc "Launch preview environment"
 task :preview do
-  system "jekyll --auto --server"
+  system "jekyll serve --watch"
 end # task :preview
  
 desc "Deploy generated site to Amazon S3"
